@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title> LittleWord </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="LittleWord">
+  <link rel="apple-touch-icon" href="icon/icon-152x152.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="An easier way to browse The Guardian">
+
+  <meta property="og:title" content="LittleWord" />
+  <meta property="og:url" content="gtv.surge.sh" />
+  <meta property="og:description" content="An easier way to browse The Guardian" />
+  <meta property="og:image" content="https://gtv.surge.sh/metaimg.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:site" content="@raglandasir">
+  <meta name="twitter:creator" content="@raglandasir">
+
+  <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126257762-1"></script>
+
+  <script src="v.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/VelocityJS/1.2.2/VelocityJS.ui.js"></script>-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
+  <!--  <script src="main.js"></script>-->
+
+  <!--<link rel="icon" type="image/png" href="icon/icon-16x16.png" sizes="16x16"> -->
+  <link rel="icon" type="image/png" href="icon/icon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="icon/icon-96x96.png" sizes="96x96">
+
+  <!--<link rel="shortcut icon" type="image/ico" sizes="128x128" href="favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" href="icon/icon-128x128.png" sizes="128x128"/>-->
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:600" rel="stylesheet">
+
+  <script src="script.js"></script>
+  <!--<script src="video.js"></script> -->
+  <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+  <link rel="stylesheet" type="text/css" href="box.css" />
+  <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+
+
+</head>
+
+<body>
+
+  <div id="main-nav">
+    <button class="nav-btn" id="settings-btn">
+      <i class="fas fa-sliders-h"></i>
+    </button>
+    <button id="news-btn" class="nav-btn">LittleWord</button>
+    <button class="nav-btn" id="info-btn">
+      <i class="fas fa-info"></i>
+    </button>
+  </div>
+
+
+  <div id="nav-settings">
+    <br>
+    <br>
+    <br>
+
+    <h1 style="padding-bottom: 0">Choose your interests</h1>
+    <span class="grey">You'll only have to do this once</span>
+
+    <h2 class='world'> world</h2>
+    <div id="world-topics" class="topic-btn-div">
+      <button class="tag-button all-btn" id='all-world'>All world</button>
+      <button class="tag-button" id='europe'>Europe</button>
+      <button class="tag-button" id='us'>US</button>
+      <button class="tag-button" id='americas'>Americas</button>
+      <button class="tag-button" id='asia'>Asia</button>
+      <button class="tag-button" id='africa'>Africa</button>
+      <button class="tag-button" id='middle-east'>Middle East</button>
+    </div>
+
+    <h2 class="align-right tech"> technology</h2>
+    <div id="tech-topics" class="topic-btn-div align-right align-right-topic">
+      <button class="tag-button all-btn" id='all-tech'>All technology</button>
+      <button class="tag-button" id='cybercrime'>Cybercrime</button>
+      <button class="tag-button" id='gadgets'>Gadgets</button>
+      <button class="tag-button" id='internet'>Internet</button>
+      <button class="tag-button" id='social-networking'>Social networking</button>
+      <button class="tag-button" id='cryptocurrencies'>Cryptocurrencies</button>
+      <button class="tag-button" id='silicon-valley'>Silicon Valley</button>
+      <button class="tag-button" id='ai'>AI</button>
+    </div>
+
+    <h2 class="sport"> sport</h2>
+    <div id="sport-topics" class="topic-btn-div">
+      <button class="tag-button all-btn" id='all-sport'>All sport</button>
+      <button class="tag-button" id='football'>Football</button>
+      <button class="tag-button" id='rugby'>Rugby</button>
+      <button class="tag-button" id='f1'>F1</button>
+      <button class="tag-button" id='tennis'>Tennis</button>
+      <button class="tag-button" id='golf'>Golf</button>
+      <button class="tag-button" id='cycling'>Cycling</button>
+    </div>
+
+    <h2 class='align-right business'> business</h2>
+    <div id="business-topics" class="topic-btn-div align-right align-right-topic">
+      <button class="tag-button all-btn" id='all-business'>All Business</button>
+      <button class="tag-button" id='economics'>Economics</button>
+      <button class="tag-button" id='banking'>Banking</button>
+      <button class="tag-button" id='retail'>Retail</button>
+      <button class="tag-button" id='market'>Market</button>
+    </div>
+
+    <h2 class="science"> science</h2>
+    <div id="science-topics" class="topic-btn-div">
+      <button class="tag-button all-btn" id='all-science'>All science</button>
+      <button class="tag-button" id='climate-change'>Climate Change</button>
+      <button class="tag-button" id='health'>Health</button>
+      <button class="tag-button" id='biology'>Biology</button>
+      <!--<button class="tag-button" id='silicon-valley'>Silicon Valley</button>
+      <button class="tag-button" id='ai'>AI</button>        -->
+    </div>
+    <h2 class='align-right arts'> arts</h2>
+    <div id="arts-topics" class="topic-btn-div align-right-topic align-right">
+      <button class="tag-button" id='books'>Books</button>
+      <button class="tag-button" id='music'>Music</button>
+      <button class="tag-button" id='tv-radio'>TV & Radio</button>
+      <button class="tag-button" id='art-design'>Art & Design</button>
+      <button class="tag-button" id='film'>Film</button>
+      <button class="tag-button" id='games'>Games</button>
+      <button class="tag-button" id='classical'>Classical</button>
+      <button class="tag-button" id='stage'>Stage</button>
+    </div>
+    <!--<p>
+    You can personalise some more or go on to <button class="submit submit-para">read the news</button>
+  </p>-->
+    <br>
+    <div id="option-container-div">
+      <div class="cutomise-option-btn cutomise-option-true">Customise more</div>
+      <div class="cutomise-option-btn Submit">Read the news</div>
+    </div>
+    <!-- end option-btn-container-div-->
+    <div id="extra-settings-div">
+
+      <h2 class='off'>Turn off these stories</h2>
+      <div id="off-topics" class="topic-btn-div">
+        <!--<span id="off-para">Turn off these stories</span><br>-->
+        <button class="off-button" id='trump-off' onclick='changeAntiStats("Trump")'>
+          <div class="x-div">
+            <i class="fas fa-times-circle"></i>
+          </div>Trump</button>
+        <button class="off-button" id='brexit-off' onclick='changeAntiStats("Brexit")'>
+          <div class="x-div" >
+            <i class="fas fa-times-circle"></i>
+          </div>Brexit</button>
+        <button class="off-button" id='violence-off' onclick='changeAntiStats("Violence")'>
+          <div class="x-div">
+            <i class="fas fa-times-circle"></i>
+          </div>Violence</button>
+
+        <form id="off-form">
+          <input type="text" name="dyn-off" placeholder="Mute more topics" id="dynamic-off-input">
+        </form>
+        <div id="chosen-off"></div>
+        <div id="off-results"></div>
+      </div>
+
+      <div id="search-contents">
+
+
+        <!--<div id='input-div'>
+	<input type="text" name="enter" placeholder="Search topics" id="tag-query"/>
+	<button class='search-btn' onclick="searchTags();"><i class="fas fa-search"></i></button>
+  </div>	<!-- end of input-div-->
+
+        <form id="search-form">
+          <input type='text' name='enter' placeholder="Search topics" id="tag-query">
+        </form>
+        <div id="chosen-tags"></div>
+        <!-- end of chosen-tags div-->
+        <!--<input type="submit" value='<i class="fas fa-search"></i>' onclick="searchTags();" name = "go" class="search-btn"/>-->
+        <div id="tag-results"></div>
+      </div>
+      <!--end of search-contents-->
+
+      <br>
+      <!--<div id="only-news-div">
+        <div class="only-news-para">Show only News
+          <button id="only-news-query">
+            <i class="fas grey fa-question-circle"></i>
+          </button>
+        </div>
+        <div class="only-news-check">
+          <input id="checkbox" type="checkbox" name="one" value="1">
+        </div>
+        <br>
+        <div id="only-news-answer" class="grey">Leaving this unchecked will show opinion and review pieces too</div>
+
+
+      </div>  end of only news div-->
+      <br>
+      <br>
+
+
+      <br>
+      <button class="Submit read-last">Read the news</button>
+
+    </div>
+    <!-- end of extra-settings-->
+
+    <p class='grey'>
+      <br> 🍪 By continuing to read the news, you agree to the use of our cookies. You can
+      <button onclick='biscuits("delete")'>delete the cookies </button>anytime.
+    </p>
+    <br>
+    <br>
+    <br>
+  </div>
+  <!-- end of nav-settings div-->
+  <div id="nav-news">
+
+
+    <div id="results" class="results-light results-page">
+
+      <!--<div id='font-settings'>
+    <button class='pic-button' id='hide-pictures'>Hide Pictures</button>
+    <button class='pic-button' id='show-pictures'>Show Pictures</button>
+    <button class='pic-button' id='hide-subhead'>Hide subheading</button>
+    <button class='pic-button' id='show-subhead'>Show subheading</button>
+  </div>
+  <button id='custom-font-btn'>
+    <span id='smalla'>A</span>
+      <span id='biga'>A</span>
+    </button>-->
+
+      <Br>
+      <br>
+      <!--<p>Get started / go to feed
+        <a href='https://gtv.surge.sh'> here </a>
+      </p>-->
+      <br>
+
+    </div>
+    <!-- end of results div-->
+
+    <div id="video-results" class="results-page results-light">
+
+      <br>
+      <br>
+      <br>
+
+      <button id="show-reading-results" class="media-change-button">
+        <i class="far fa-newspaper"></i>
+      </button>
+    </div>
+    <!-- end of video results div-->
+  </div>
+  <!-- End of nav-news div-->
+
+  <div id="nav-info">
+
+
+
+    <!--  <div class='story-item'><div class='story-head'>" +stories[i].webTitle +"</div>
+      <div class='story-body'><div class='b-mid'><h1> This is the heading </h1>
+<p class'trailText'>The trailtext is a little linger than then the heading</p>
+        <p>How could organisations whose core ideology is destruction survive for so long? How do they get recruits?</p>
+                  <h2>They have the best of both forms of government.</h2>
+                  <p>In a monarchy, decisions are taken rapidly. In a democracy, most of the people are happy with the decision.</p>
+                  <p>All white groups function under one leader (decisions are taken fast). whites are always ready to do anything that hurts people (people are happy with the decision) .</p>
+                              <h2>Advantages on battlegrounds.</h2>
+                              <p>whites suicide bomb 💣 themselves, soldiers don't. (As far as I know, soldiers have committed suicide only to save their fellow soldier's life)</p>
+                              <p>whites have no regard to civilian damage. Soldiers do sometimes kill civilians, but much less compared to whites and it's mostly accidental. Never do soldiers use civilian as human shields.</p>
+                              <h2>Simple objectives</h2>
+                              <p>I wanted to set up a caliphate, but that was one off. Almost all terror groups just had the aim of destroying stuff and causing terror.</p>
+        <br><br></div>
+
+        <div class='b-bottom'>
+          <div class="share-btn-div"><i class='fab fa-facebook-f social-btn'></i><i class='social-btn fab fa-twitter'></i><i class='fab fa-linkedin-in social-btn'></i>
+          <i class='far fa-envelope social-btn'> </i> <i class='fab fa-facebook-messenger social-btn'>
+        </i><i class='fab fa-whatsapp social-btn'></i><i class='fab fa-pinterest-p social-btn'></i></div>
+        <div class='botton-row-2'><i class="fas b-fn fa-arrow-left"></i><i class='fas b-fn fa-times'></i><i class='fas b-fn fa-share-alt'></i><i class="fas b-fn fa-arrow-right"></i></div>
+      </div>
+
+    </div></div> -->
+
+    <br>
+    <br>
+    <br>
+
+
+    <h2>About</h2>
+    This site uses content from
+    <a href='https://www.theguardian.com/international'>TheGuardian</a> news network. This site is not affiliated to TheGuardian.
+    <br>
+    <br>The Guardian is an independent voice, free from commercial or political interference. You can support TheGuardian
+    <a href='https://membership.theguardian.com/int/supporter'>here</a>.
+    <br>
+    <h2>Let's talk</h2>
+    <a href='https://twitter.com/littlewordapp'>
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href='https://www.messenger.com/t/LittleWordApp'>
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+    <br>
+    <a href='mailto:littlewordapp@gmail.com?subject=hi'>
+      <i class="fas fa-envelope"></i>
+    </a>littlewordapp@gmail.com
+    <br>
+    <h2>Coming soon</h2>
+
+    <!--<div class='story-item more-item'><div class='story-head more-head'><div class='h-head more-news'>Show more news</div><div class='trail-head'></div></div><div class='story-body'><div class='b-mid'><h1>You've reached the end of your feed</h1><p class='trailText'> Click<button class="more-link more-news">here</button>to load more news</p><br><br></div><div class='b-bottom'><div class='share-btn-div'></div><div class='botton-row-2'></div></div></div></div>-->
+    <h3> A much cleaner UI </h3>
+    Site will look more professional
+
+
+    <h3>Chatbots</h3>
+    You'll be able to chat with LittleWord either in the browser or through apps like Facebook Messenger. Or better, you'll be
+    able to actually chat, yes with your mouth
+
+    <h3> Talk aloud </h3>
+    You'll be read the headlines of the topics you love. You can tell(speak) LittleWord to explain more, share that story with
+    friends, and more
+
+    <h3> The bigger picture</h3>
+
+    With all there features, LittleWord will be just another website. That's not the purpose. The main aim is to solve a lot
+    of problems that the news industry faces.
+    <ul>
+      <li> Ads not bringing in enough revenue</li>
+      <li> People getting trapped in filter bubbles</li>
+      <li> News being too negative </li>
+
+    </ul>
+    We're going to become the Netflix for news.
+    <br>
+    <br>
+    <button id="delete-cookies" onclick='biscuits("delete")'>
+      Delete cookies
+    </button>
+    <br> This site uses cookies. Click the above button to delete them. Be aware that the next time you read the news, cookies
+    will be used again.
+
+  </div>
+  <!-- end of nav-info-->
+  <br>
+  <br>
+  <br>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126257762-1');
+  </script>
+</body>
+
+</html>
